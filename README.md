@@ -38,7 +38,14 @@ Visit http://localhost:3000 in your web browser to see the camera control cube i
 
 ## One Line Inject
 just put
-<ControlViewCube /> in canvas and go.
+
+```
+<Canvas>
+<ControlViewCube />
+<Canvas />
+```
+
+in canvas and go.
 
 Project Structure
 The project structure is designed to keep the code organized and easy to understand. Here's an overview of the main files and directories:
