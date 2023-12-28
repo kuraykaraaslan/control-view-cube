@@ -2,9 +2,9 @@
   "name": "control-view-cube",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "dev": "webpack serve --mode development"
   },
   "keywords": [],
   "author": "Kuray Karaaslan",
@@ -14,5 +14,9 @@
     "@react-three/fiber": "^8.13.6",
     "react": "^18.2.0",
     "three": "^0.155.0"
+
+  },
+  "devDependencies": {
+    "mocha": "^9.1.3"
   }
 }

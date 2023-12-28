@@ -118,177 +118,177 @@ const ControlViewCube = (propsIn) => {
             <>
             {/* Top */}
             <Plane position={[0, cube_size/2, 0]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.main_color} />
-            <Text position={[0, text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{text_corner_hide ? '' : props.locale.top}</Text>
+            <Text position={[0, text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{props.cube.text_main_hide ? '' : props.locale.top}</Text>
             {/* Bottom */}
             <Plane position={[0, -cube_size/2, 0]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.main_color} />
             <Text position={[0, -text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{props.locale.bottom}</Text>
             {/* North */}
             <Plane position={[0, 0, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.main_color} />
-            <Text position={[0, 0 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'North'}</Text>
+            <Text position={[0, 0 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{props.cube.text_main_hide ? '' : props.locale.north}</Text>
             {/* South */}
             <Plane position={[0, 0, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(180), 0]} material-color={props.cube.main_color} />
-            <Text position={[0, 0 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'South'}</Text>
+            <Text position={[0, 0 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_main_hide ? '' : props.locale.south}</Text>
             {/* East */}
             <Plane position={[cube_size/2, 0, 0]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.main_color} />
-            <Text position={[text_position, 0 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'East'}</Text>
+            <Text position={[text_position, 0 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_main_hide ? '' : props.locale.east}</Text>
             {/* West */}
             <Plane position={[-cube_size/2, 0, 0]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.main_color} />
-            <Text position={[-text_position, 0 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'West'}</Text>
+            <Text position={[-text_position, 0 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_main_hide ? '' : props.locale.west}</Text>
             {/* Vertical Edges */}
                 {/* North East Parallel to North */}
                 <Plane position={[cube_size/3, 0, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[cube_size/3, 0 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'NE'}</Text>
+                <Text position={[cube_size/3, 0 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_north}</Text>
                 {/* North East Parallel to East */}
                 <Plane position={[cube_size/2, 0, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[text_position, 0 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'NE'}</Text>
+                <Text position={[text_position, 0 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_east}</Text>
                 {/* North West Parallel to North */}
                 <Plane position={[-cube_size/3, 0, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[-cube_size/3, 0 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'NW'}</Text>
+                <Text position={[-cube_size/3, 0 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_north}</Text>
                 {/* North West Parallel to West */}
                 <Plane position={[-cube_size/2, 0, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[-text_position, 0 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'NW'}</Text>
+                <Text position={[-text_position, 0 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_west}</Text>
                 {/* South East Parallel to South */}
                 <Plane position={[cube_size/3, 0, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(180), 0]} material-color={props.cube.edge_color} />
-                <Text position={[cube_size/3, 0 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'SE'}</Text>
+                <Text position={[cube_size/3, 0 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_south}</Text>
                 {/* South East Parallel to East */}
                 <Plane position={[cube_size/2, 0, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[text_position, 0 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'SE'}</Text>
+                <Text position={[text_position, 0 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_east}</Text>
                 {/* South West Parallel to South */}
                 <Plane position={[-cube_size/3, 0, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(0), MathUtils.degToRad(180), 0]} material-color={props.cube.edge_color} />
-                <Text position={[-cube_size/3, 0 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'SW'}</Text>
+                <Text position={[-cube_size/3, 0 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_south}</Text>
                 {/* South West Parallel to West */}
                 <Plane position={[-cube_size/2, 0, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[-text_position, 0 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'SW'}</Text>
+                <Text position={[-text_position, 0 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_west}</Text>
             {/* Horizontal Edges */}
                 {/* Top North Face to North */}
                 <Plane position={[0, cube_size/3, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'TN'}</Text>
+                <Text position={[0, cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_north}</Text>
                 {/* Top North Face to Top */}
                 <Plane position={[0, cube_size/2, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TN'}</Text>
+                <Text position={[0, text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_north}</Text>
                 {/* Top South Face to South */}
                 <Plane position={[0, cube_size/3, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(180), 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'TS'}</Text>
+                <Text position={[0, cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_south}</Text>
                 {/* Top South Face to Top */}
                 <Plane position={[0, cube_size/2, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TS'}</Text>
+                <Text position={[0, text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_south}</Text>
                 {/* Top East Face to East */}
                 <Plane position={[cube_size/2, cube_size/3, 0]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[text_position, cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'TE'}</Text>
+                <Text position={[text_position, cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_east}</Text>
                 {/* Top East Face to Top */}
                 <Plane position={[cube_size/3, cube_size/2, 0]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[cube_size/3, text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TE'}</Text>
+                <Text position={[cube_size/3, text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_east}</Text>
                 {/* Top West Face to West */}
                 <Plane position={[-cube_size/2, cube_size/3, 0]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[-text_position, cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'TW'}</Text>
+                <Text position={[-text_position, cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_west}</Text>
                 {/* Top West Face to Top */}
                 <Plane position={[-cube_size/3, cube_size/2, 0]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[-cube_size/3, text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TW'}</Text>
+                <Text position={[-cube_size/3, text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.top_west}</Text>
                 {/* Bottom North Face to North */}
                 <Plane position={[0, -cube_size/3, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, -cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'BN'}</Text>
+                <Text position={[0, -cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_north}</Text>
                 {/* Bottom North Face to Bottom */}
                 <Plane position={[0, -cube_size/2, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, -text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BN'}</Text>
+                <Text position={[0, -text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_north}</Text>
                 {/* Bottom South Face to South */}
                 <Plane position={[0, -cube_size/3, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(180), 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, -cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'BS'}</Text>
+                <Text position={[0, -cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_south}</Text>
                 {/* Bottom South Face to Bottom */}
                 <Plane position={[0, -cube_size/2, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[0, -text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BS'}</Text>
+                <Text position={[0, -text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_south}</Text>
                 {/* Bottom East Face to East */}
                 <Plane position={[cube_size/2, -cube_size/3, 0]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[text_position, -cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'BE'}</Text>
+                <Text position={[text_position, -cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_east}</Text>
                 {/* Bottom East Face to Bottom */}
                 <Plane position={[cube_size/3, -cube_size/2, 0]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[cube_size/3, -text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BE'}</Text>
+                <Text position={[cube_size/3, -text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_east}</Text>
                 {/* Bottom West Face to West */}
                 <Plane position={[-cube_size/2, -cube_size/3, 0]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.edge_color} />
-                <Text position={[-text_position, -cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'BW'}</Text>
+                <Text position={[-text_position, -cube_size/3 , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_west}</Text>
                 {/* Bottom West Face to Bottom */}
                 <Plane position={[-cube_size/3, -cube_size/2, 0]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.edge_color} />
-                <Text position={[-cube_size/3, -text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BW'}</Text>
+                <Text position={[-cube_size/3, -text_position , 0]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_edge_hide ? '' : props.locale.bottom_west}</Text>
             {/* Corners */}
                 {/* Top North East */}
                     {/* Top North East Face to North */}
                     <Plane position={[cube_size/3, cube_size/3, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'TNE'}</Text>
+                    <Text position={[cube_size/3, cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_north_east}</Text>
                     {/* Top North East Face to Top */}
                     <Plane position={[cube_size/3, cube_size/2, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TNE'}</Text>
+                    <Text position={[cube_size/3, text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_north_east}</Text>
                     {/* Top North East Face to East */}
                     <Plane position={[cube_size/2, cube_size/3, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[text_position, cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'TNE'}</Text>
+                    <Text position={[text_position, cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_north_east}</Text>
                 {/* Top North West */}
                     {/* Top North West Face to North */}
                     <Plane position={[-cube_size/3, cube_size/3, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'TNW'}</Text>
+                    <Text position={[-cube_size/3, cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_north_west}</Text>
                     {/* Top North West Face to Top */}
                     <Plane position={[-cube_size/3, cube_size/2, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TNW'}</Text>
+                    <Text position={[-cube_size/3, text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_north_west}</Text>
                     {/* Top North West Face to West */}
                     <Plane position={[-cube_size/2, cube_size/3, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-text_position, cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'TNW'}</Text>
+                    <Text position={[-text_position, cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_north_west}</Text>
                 {/* Top South East */}
                     {/* Top South East Face to South */}
                     <Plane position={[cube_size/3, cube_size/3, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(180), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'TSE'}</Text>
+                    <Text position={[cube_size/3, cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_south_east}</Text>
                     {/* Top South East Face to Top */}
                     <Plane position={[cube_size/3, cube_size/2, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TSE'}</Text>
+                    <Text position={[cube_size/3, text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_south_east}</Text>
                     {/* Top South East Face to East */}
                     <Plane position={[cube_size/2, cube_size/3, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[text_position, cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'TSE'}</Text>
+                    <Text position={[text_position, cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_south_east}</Text>
                 {/* Top South West */}
                     {/* Top South West Face to South */}
                     <Plane position={[-cube_size/3, cube_size/3, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(0), MathUtils.degToRad(180), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'TSW'}</Text>
+                    <Text position={[-cube_size/3, cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_south_west}</Text>
                     {/* Top South West Face to Top */}
                     <Plane position={[-cube_size/3, cube_size/2, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(-90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{'TSW'}</Text>
+                    <Text position={[-cube_size/3, text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(-90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_south_west}</Text>
                     {/* Top South West Face to West */}
                     <Plane position={[-cube_size/2, cube_size/3, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-text_position, cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'TSW'}</Text>
+                    <Text position={[-text_position, cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.top_south_west}</Text>
                 {/* Bottom North East */}
                     {/* Bottom North East Face to North */}
                     <Plane position={[cube_size/3, -cube_size/3, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, -cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'BNE'}</Text>
+                    <Text position={[cube_size/3, -cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_north_east}</Text>
                     {/* Bottom North East Face to Bottom */}
                     <Plane position={[cube_size/3, -cube_size/2, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, -text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BNE'}</Text>
+                    <Text position={[cube_size/3, -text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_north_east}</Text>
                     {/* Bottom North East Face to East */}
                     <Plane position={[cube_size/2, -cube_size/3, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[text_position, -cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'BNE'}</Text>
+                    <Text position={[text_position, -cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_north_east}</Text>
                 {/* Bottom North West */}
                     {/* Bottom North West Face to North */}
                     <Plane position={[-cube_size/3, -cube_size/3, cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, -cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{'BNW'}</Text>
+                    <Text position={[-cube_size/3, -cube_size/3 , text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_north_west}</Text>
                     {/* Bottom North West Face to Bottom */}
                     <Plane position={[-cube_size/3, -cube_size/2, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, -text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BNW'}</Text>
+                    <Text position={[-cube_size/3, -text_position , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_north_west}</Text>
                     {/* Bottom North West Face to West */}
                     <Plane position={[-cube_size/2, -cube_size/3, cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-text_position, -cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'BNW'}</Text>
+                    <Text position={[-text_position, -cube_size/3 , cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_north_west}</Text>
                 {/* Bottom South East */}
                     {/* Bottom South East Face to South */}
                     <Plane position={[cube_size/3, -cube_size/3, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(180), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, -cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'BSE'}</Text>
+                    <Text position={[cube_size/3, -cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_south_east}</Text>
                     {/* Bottom South East Face to Bottom */}
                     <Plane position={[cube_size/3, -cube_size/2, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[cube_size/3, -text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BSE'}</Text>
+                    <Text position={[cube_size/3, -text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_south_east}</Text>
                     {/* Bottom South East Face to East */}
                     <Plane position={[cube_size/2, -cube_size/3, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[text_position, -cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{'BSE'}</Text>
+                    <Text position={[text_position, -cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_south_east}</Text>
                 {/* Bottom South West */}
                     {/* Bottom South West Face to South */}
                     <Plane position={[-cube_size/3, -cube_size/3, -cube_size/2]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(0), MathUtils.degToRad(180), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, -cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{'BSW'}</Text>
+                    <Text position={[-cube_size/3, -cube_size/3 , -text_position]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(180), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_south_west}</Text>
                     {/* Bottom South West Face to Bottom */}
                     <Plane position={[-cube_size/3, -cube_size/2, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[MathUtils.degToRad(90), 0, 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-cube_size/3, -text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{'BSW'}</Text>
+                    <Text position={[-cube_size/3, -text_position , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[MathUtils.degToRad(90), 0, 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_south_west}</Text>
                     {/* Bottom South West Face to West */}
                     <Plane position={[-cube_size/2, -cube_size/3, -cube_size/3]} args={[cube_size/3, cube_size/3]} rotation={[0, MathUtils.degToRad(-90), 0]} material-color={props.cube.corner_color} />
-                    <Text position={[-text_position, -cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{'BSW'}</Text>
+                    <Text position={[-text_position, -cube_size/3 , -cube_size/3]} fontSize={props.cube.text_size} color={props.cube.text_color} rotation={[0, MathUtils.degToRad(-90), 0]}>{ props.cube.text_corner_hide ? '' : props.locale.bottom_south_west}</Text>
             
                     
             </>
@@ -300,7 +300,7 @@ const ControlViewCube = (propsIn) => {
 
         return (
             <>
-                <Suspense fallback={Loading()} />
+                <Suspense fallback={Loading()} >
                 <Canvas>
                     <CameraControls 
                         enableRotate={props.camera_controls_settings.enableRotate}
@@ -313,6 +313,7 @@ const ControlViewCube = (propsIn) => {
                     />
                     {createCube()}
                 </Canvas>
+                </Suspense>
                         
 
             </>
