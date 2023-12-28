@@ -2,6 +2,8 @@
 
 ![](static/cube.gif)
 
+the Control View Cube from CAD softwares
+
 ## Description
 
 ControlViewCube is a React component designed to bring the modern CAD's View Cube feature to Three.js, enhancing the 3D visualization experience. Whether you're building a CAD application, a 3D modeling tool, or any project that involves navigating a 3D scene, ControlViewCube offers an intuitive and interactive solution.
