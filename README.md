@@ -65,14 +65,14 @@ npm init
 
 npm install three @react-three/fiber @react-three/drei
 
-npm install @kuraykaraaslan/control-view-cube
+npm install control-view-cube
 ```
 
 
 ## One Line Inject
 just put
 ```
-import { ControlViewCube } from '@kuraykaraaslan/control-view-cube';
+import { ControlViewCube } from 'control-view-cube';
 ```
 and
 
