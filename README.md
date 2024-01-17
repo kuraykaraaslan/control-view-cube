@@ -32,7 +32,7 @@ Feel free to adjust the wording or structure to better match your preferred styl
 
 ### Screenshot
 
-![](static/screenshot.gif)
+![](static/donut.gif)
 
 
 ## Future Implementations / Roadmap
